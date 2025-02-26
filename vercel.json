@@ -12,7 +12,7 @@
       "dest": "/vue-ooxml-parser1/dist/$1"
     },
     {
-      "src": "/(*)",
+      "src": "/.*",
       "dest": "/"
     }
   ],
