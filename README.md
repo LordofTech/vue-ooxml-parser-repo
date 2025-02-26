@@ -21,8 +21,8 @@ Steps Involved in Parsing:
 1. File Upload: The user uploads a `.docx` file via an input element.
 2. File Reading: The application reads the file as an ArrayBuffer using the `FileReader` API.
 3. Zip Extraction: The ArrayBuffer is passed to JSZip to load the ZIP file and extract the `word/document.xml` file, which contains the document's main content.
-4. **XML to JSON Conversion**: The extracted XML is converted to JSON using the `xml-js` library.
-5. **Text Extraction**: The application traverses the JSON structure to retrieve text from paragraphs, handling both arrays and single object cases.
+4. XML to JSON Conversion: The extracted XML is converted to JSON using the `xml-js` library.
+5. Text Extraction: The application traverses the JSON structure to retrieve text from paragraphs, handling both arrays and single object cases.
 
  2. Challenges Encountered and Solutions Implemented
 
@@ -53,14 +53,33 @@ Steps Involved in Parsing:
    ```bash
    npm run dev
    ```
-   Open your browser and navigate to `http://localhost:3000` (or the specified port).
+   Open your browser and navigate to `http://localhost:5173` (or the specified port).
 
-4. Testing the Application:
+ 4. run:
+    ctrl + c to halt server so you can deploy on netlife.
+
+ 5.  run:
+     npm run build
+
+ 6.  run:
+      netlify deploy
+
+      choose "dist" when prompted
+
+  7.  run:
+      netlify deploy --prod
+      
+      choose "dist" when prompted
+
+  8.  Then copy and paste this URL: https://vue-ooxml-parser.netlify.app/ to access the App.
+    
+
+9. Testing the Application:
    - Upload a `.docx` file using the file input.
    - Observe the extracted content displayed on the screen.
    - Check for any errors in the console during file upload and parsing.
 
-5. Deployment
+10. Deployment
 
 The application has been successfully deployed on Netlify. Here are the details:
 
