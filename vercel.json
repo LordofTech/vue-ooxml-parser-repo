@@ -2,16 +2,25 @@
   "version": 2,
   "builds": [
     {
-      "src": "dist/**",
+      "src": "vue-ooxml-parser1/dist/**/*",
       "use": "@vercel/static"
     }
   ],
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "/index.html"
+      "dest": "/vue-ooxml-parser1/dist/$1"
+    },
+    {
+      "src": "/(*)",
+      "dest": "/"
     }
   ],
-  "outputDirectory": "dist",
-  "public": "dist"
+  "outputDirectory": "vue-ooxml-parser1/dist",
+  "public": "vue-ooxml-parser1/public",
+  "build": {
+    "env": {
+      "NODE_ENV": "production"
+    }
+  }
 }
